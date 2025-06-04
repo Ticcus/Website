@@ -42,7 +42,7 @@
     <p class="author">Autors: Dāvis Links</p>
     <a href="#pieredze" class="hero-scroll-btn">↓ Lasīt tālāk</a>
   </header>
-
+  <div class="content-wrapper">
   <section id="pieredze" class="section section-left">
     <div class="section-content">
       <img src="images/1.png" alt="Students sāk programmēt LU">
@@ -59,7 +59,7 @@
         <h2>Studiju vide un atbalsts</h2>
         <p>Latvijas Universitātē studiju vide ir veidota tā, lai motivētu un atbalstītu studentus visos posmos. Pasniedzēji ir ne tikai kompetenti, bet arī pretimnākoši un saprotoši, īpaši tiem, kuri saskaras ar grūtībām. Grupas darbi, diskusijas un konsultācijas veicina sadarbību, kas palīdz labāk izprast mācību saturu. Bieži vien tieši kursabiedru atbalsts kļuva par galveno dzinējspēku. Šāda vide rada pārliecību, ka neesi viens un ka palīdzība vienmēr ir rokas stiepiena attālumā. Tā nav tikai akadēmiska vieta, tā ir kopiena.</p>
       </div>
-      <img src="images/2.jpeg" alt="LU studenti lekcijā">
+      <img src="images/2.jpeg" alt="LU studenti lekcijā" style="width: 100%; height: auto; margin-top: 20px; border-radius: 8px;">
     </div>
   </section>
   
@@ -78,10 +78,15 @@
   
   <section id="izaugsme" class="section section-right">
     <div class="section-content">
-      <img src="images/4.jpg" alt="Reflektējošs students domā par mērķiem">
+      <img src="images/4.jpg" alt="Latvijas Universitātēs ēka">
       <div class="text">
         <h2>Par semestriem LU</h2>
         <p>Katrā semestrī LU dzīve mainās, jauni priekšmeti, jauni izaicinājumi un jaunas iespējas. Semestri strukturē studiju gaitu, un katrs no tiem atnes kaut ko jaunu. Sākumā daudz kas šķita mulsinošs, taču laika gaitā izveidojas ritms, kurā mācības kļūst pārskatāmas. Daži semestri bija vieglāki, citi, prasīgāki, taču visi sniedza vērtīgas atziņas. Mācījos plānot semestri ne tikai akadēmiski, bet arī emocionāli. Tieši šī cikliskā pieredze deva iespēju regulāri izvērtēt savus mērķus un progresu.</p>
+        <a href="semestri.html" class="hero-scroll-btn"
+        style="margin-top: 20px; width: 100%; display: block; text-align: center; box-sizing: border-box;">
+        Lasīt vairāk
+     </a>
+     
       </div>
     </div>
   </section>
@@ -90,7 +95,7 @@
 
   <section id="dalos" class="section section-left">
     <div class="section-content">
-      <img src="images/5.png" alt="Students raksta savus iespaidus">
+      <img src="images/5.png" alt="Latvijas Universitātēs diploms">
       <div class="text">
         <h2>Vai tas bija tā vērts?</h2>
         <p>Pavisam noteikti, jā. Mācības Latvijas Universitātē man sniedza daudz vairāk nekā tikai diplomu. Esmu ieguvis prasmes, zināšanas, draugus un dzīves skatījumu, kas mani pavada katru dienu. Šie gadi bija pilni ar izaicinājumiem, taču katrs no tiem kalpoja kā iespēja augt. Esmu pārliecināts, ka LU izvēle bija pareiza, tā man deva ceļakarti uz profesionālo un personīgo attīstību. Ja man būtu vēlreiz jāizvēlas, es darītu to pašu, un darītu to ar vēl lielāku apņēmību.</p>
@@ -98,7 +103,8 @@
     </div>
   </section>
   
-  
+</div>
+
 <button id="scroll-to-top" aria-label="Atpakaļ uz augšu">⬆</button>
 
 <footer class="footer-layout">
@@ -134,7 +140,7 @@
           <img src="images/facebook-icon.png" alt="Facebook" class="footer-icon" />
         </a>
         <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="images/instagram-icon.png" alt="Instagram" class="footer-icon" />
+          <img src="images/Instagram-icon.png" alt="Instagram" class="footer-icon" />
         </a>
       </div>
     </div>
@@ -152,93 +158,122 @@
   const navLinks = document.getElementById('nav-links');
   const themeToggle = document.getElementById('theme-toggle');
   const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+  const scrollBtn = document.getElementById('scroll-to-top');
 
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  // Tēmas pielietošana no localStorage
+  function applySavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const isDark = savedTheme === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+    updateThemeIcon(isDark);
+  }
 
+  // Ikonas maiņa
+  function updateThemeIcon(isDark) {
+    const icon = isDark ? '🌙' : '☀️';
+    if (themeToggle) themeToggle.textContent = icon;
+    if (themeToggleDesktop) themeToggleDesktop.textContent = icon;
+  }
+
+  // Tēmas pārslēgšana un saglabāšana
   function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    if (themeToggle) themeToggle.textContent = isDark ? '🌙' : '☀️';
-    if (themeToggleDesktop) themeToggleDesktop.textContent = isDark ? '🌙' : '☀️';
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateThemeIcon(isDark);
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme);
-  }
+  // Izsaukšana, kad lapa ielādēta
+  window.addEventListener('DOMContentLoaded', () => {
+    applySavedTheme();
 
-  if (themeToggleDesktop) {
-    themeToggleDesktop.addEventListener('click', toggleTheme);
-  }
+    if (burger) {
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
 
-  const navDesktop = document.querySelector('.nav-desktop');
-  const hero = document.querySelector('.hero');
-  const heroObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      navDesktop.classList.toggle('visible', !entry.isIntersecting);
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    if (themeToggleDesktop) {
+      themeToggleDesktop.addEventListener('click', toggleTheme);
+    }
+
+    // Hero section intersection
+    const navDesktop = document.querySelector('.nav-desktop');
+    const hero = document.querySelector('.hero');
+    if (navDesktop && hero) {
+      const heroObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          navDesktop.classList.toggle('visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0.05 });
+      heroObserver.observe(hero);
+    }
+
+    // Section animation
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.section').forEach(section => sectionObserver.observe(section));
+
+    // Aktīvās saites izcelšana
+    const sections = document.querySelectorAll("section");
+    const navLinksloc = document.querySelectorAll(".nav-desktop a, .nav-mobile a");
+
+    function activateNavLink() {
+      const scrollPos = window.scrollY + window.innerHeight * 0.2;
+
+      let closestIndex = 0;
+      let smallestDistance = Infinity;
+
+      sections.forEach((section, index) => {
+        const distance = Math.abs(section.offsetTop - scrollPos);
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      navLinksloc.forEach(link => link.classList.remove("active"));
+      const activeId = sections[closestIndex].getAttribute("id");
+      document.querySelectorAll(`a[href="#${activeId}"]`).forEach(link => {
+        link.classList.add("active");
+      });
+    }
+
+    window.addEventListener("scroll", activateNavLink);
+    window.addEventListener("load", activateNavLink);
+
+    // Mobile menu auto-close
+    document.querySelectorAll('.nav-mobile .nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
     });
-  }, { threshold: 0.05 });
-  heroObserver.observe(hero);
 
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.section').forEach(section => sectionObserver.observe(section));
-
-  const sections = document.querySelectorAll("section");
-  const navLinksloc = document.querySelectorAll(".nav-desktop a, .nav-mobile a");
-
-  function activateNavLink() {
-    const scrollPos = window.scrollY + window.innerHeight * 0.2;
-
-    let closestIndex = 0;
-    let smallestDistance = Infinity;
-
-    sections.forEach((section, index) => {
-      const distance = Math.abs(section.offsetTop - scrollPos);
-      if (distance < smallestDistance) {
-        smallestDistance = distance;
-        closestIndex = index;
+    // Scroll-to-top button visibility
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth >= 768) {
+        if (window.scrollY > window.innerHeight / 0.75) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
       }
     });
 
-    navLinksloc.forEach(link => link.classList.remove("active"));
-    const activeId = sections[closestIndex].getAttribute("id");
-    document.querySelectorAll(`a[href="#${activeId}"]`).forEach(link => {
-      link.classList.add("active");
-    });
-  }
-
-  window.addEventListener("scroll", activateNavLink);
-  window.addEventListener("load", activateNavLink);
-
-  document.querySelectorAll('.nav-mobile .nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('show');
-    });
-  });
-  const scrollBtn = document.getElementById('scroll-to-top');
-
-window.addEventListener('scroll', () => {
-  if (window.innerWidth >= 768) {
-    if (window.scrollY > window.innerHeight / 0.75) {
-      scrollBtn.classList.add('show');
-    } else {
-      scrollBtn.classList.remove('show');
+    if (scrollBtn) {
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     }
-  }
-});
-
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
+  });
 </script>
-
-
 
 </body>
 </html>

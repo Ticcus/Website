@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LU Semestru pieredze</title>
+  <link rel="stylesheet" href="semester.css" />
+</head>
+<body>
+    <nav class="nav-desktop">
+      <ul>
+        <li><a href="index.html" class="btn-back">← Atpakaļ uz sākumu</a></li>
+        <li><button id="theme-toggle-desktop" aria-label="Toggle theme">☀️</button></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="semester-indicator">
+        <span id="semester-label">1. semestris</span>
+      </div>
+
+      <div class="semester-switch-wrapper">
+        <button class="semester-arrow" id="arrow-left">&lt;</button>
+        <div class="semester-switcher dots">
+          <div class="semester-dot active" data-semester="1"></div>
+          <div class="semester-dot" data-semester="2"></div>
+          <div class="semester-dot" data-semester="3"></div>
+          <div class="semester-dot" data-semester="4"></div>
+          <div class="semester-dot" data-semester="5"></div>
+        </div>
+        <button class="semester-arrow" id="arrow-right">&gt;</button>
+      </div>
+
+      <section class="semester-section active" id="semester-1">
+        <div class="content-wrapper">
+          <div class="section">
+            <h2>1. semestris – Ievads studijās</h2>
+            <p>Pirmais semestris bija kā ieskrējiens pilnīgi jaunā pasaulē. Viss bija jauns, no pirmās koda rindas līdz pat matemātikai, kas likās citāda nekā skolā. Tā bija sajūta, ka esmu sācis kaut ko lielu un svarīgu.</p>
+            <div class="kursi-grid">
+              <div class="kurss-card">
+                <h3>Algebra</h3>
+                <p>Matemātikas pamats, kas palīdzēja strukturēt domāšanu. Sākumā šķita teorētiski, bet vēlāk sapratu tā vērtību algoritmos.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Algoritmi un programmēšana</h3>
+                <p>Pirmā reize, kad rakstīju kodu. Ne viss strādāja uzreiz, bet sajūta, ka varu uzrakstīt programmu, bija iedvesmojoša.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Operētājsistēmas</h3>
+                <p>Daudz teorijas par to, kā dators strādā "apakšā". Reizēm sausi, bet ļoti atver acis uz to, kas patiesībā notiek ar datoru.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Datorsistēmu arhitektūra</h3>
+                <p>Sapratu, kā darbojas procesors un atmiņa, fiziskais pamats, kas stāv aiz visa, ko darām programmēšanā.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Diskrētā matemātika datoriķiem</h3>
+                <p>Loģika, kopas, kombinatorika, teorētiski, bet ļoti noderīgi, lai attīstītu strukturētu domāšanu.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Tīmekļa tehnoloģijas I</h3>
+                <p>Pirmā reize, kad kaut ko redzēju ekrānā, ko pats uztaisīju. HTML un CSS bija foršs veids, kā sākt radīt lietas.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Datoru tīkli I un ieskats nozarē</h3>
+                <p>Neliels ievads tīklu darbībā un arī IT jomas kopskats. Deva sajūtu, kur esmu iekāpis un kādi ir iespējamie ceļi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <section class="semester-section" id="semester-2">
+        <div class="content-wrapper">
+          <div class="section">
+            <h2>2. semestris - Struktūra un izaicinājumi</h2>
+            <p>Otrajā semestrī sāka justies, ka lietas kļūst nopietnākas. Matemātika ieguva jaunu dziļumu, un kodēšana vairs nebija tikai spēlēšanās, bija jāplāno un jāsaprot lielāks kopskats. Bija arī kursi, kas lika padomāt par ētiku un IT kā sabiedrības daļu.</p>
+            <div class="kursi-grid">
+              <div class="kurss-card">
+                <h3>Matemātiskā analīze I</h3>
+                <p>Pilnīgi jauns līmenis salīdzinājumā ar vidusskolu, robežas, atvasinājumi, funkcijas. Sākumā šķita ļoti grūti, bet pamazām iegāju ritmā.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Internets, tīkla etiķete un tiesiskais regulējums</h3>
+                <p>Viegli saprotams, bet arī interesanti, uzzināju vairāk par to, ko drīkst un nedrīkst darīt tiešsaistē, un kā uz IT skatās likums.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Programmatūras izstrādes pamati</h3>
+                <p>Pirmais nopietnais kurss, kur vajadzēja plānot programmatūras projektu. Vairs ne tikai kodēšana, bet arī struktūra, testēšana un dokumentēšana.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Tīmekļa tehnoloģijas II</h3>
+                <p>Turpinājums pirmajam web kursam. Šoreiz nāca klāt JavaScript un dinamiskas lapas, šķita forši redzēt, kā viss kļūst interaktīvs.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Lineārā algebra I</h3>
+                <p>Matemātika ar interesantu pielietojumu, vektori, matricas. Daudz abstrakti, bet uzrunāja.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Lineārā algebra II</h3>
+                <p>Turpinājums, kas aizveda vēl dziļāk. Bija grūtāk, bet arī strukturētāk, jutu, ka šis noderēs vēlāk, īpaši grafikā vai datu zinātnē.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Datu bāzes un informācijas sistēmu pamati</h3>
+                <p>Sākums darbam ar datubāzēm. SQL kļuva par ierastu lietu, un sapratu, cik svarīgi ir strukturēti dati.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <section class="semester-section" id="semester-3">
+        <div class="content-wrapper">
+          <div class="section">
+            <h2>3. semestris – Prakse un pielietojums</h2>
+            <p>Šajā semestrī beidzot sajutu, ka viss, ko iepriekš mācījos, sāk savienoties. Daudzi kursi bija praktiski un vērsti uz pielietošanu, citi, paplašināja redzesloku ārpus IT. Bija daudz jāmācās, bet arī daudz interesanta un reālistiska.</p>
+            <div class="kursi-grid">
+              <div class="kurss-card">
+                <h3>Varbūtību teorija un matemātiskā statistika</h3>
+                <p>Sākumā šķita abstrakti, bet ļoti ātri sapratu, ka bez šīm lietām neiztikt, īpaši, ja grib strādāt ar datiem. Bija daudz formulu, bet arī reāls pielietojums.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Ekonomikas teorijas pamati</h3>
+                <p>Pilnīgi cita pasaule, bez koda un matemātikas. Iedeva interesantu skatījumu uz to, kā IT ir saistīts ar ekonomiku un sabiedrību kopumā.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Biroja informācijas sistēmas</h3>
+                <p>Lietišķs kurss, ne tik tehnisks, bet par to, kā strādā informācijas plūsma reālā uzņēmumā. Daudz praktiskas lietas.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Ievads uzņēmējdarbībā</h3>
+                <p>Patika ideja, ka programmētājs var būt arī uzņēmējs. Kurss lika paskatīties uz IT no uzņēmuma perspektīvas.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Analītiskā ģeometrija</h3>
+                <p>Ģeometrija jaunā līmenī, vairāk aprēķini nekā zīmēšana. Reizēm smags, bet strukturēts un skaidrs kurss.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Programminženierija</h3>
+                <p>Ļoti noderīgs kurss, sapratu, kā domā lielākās komandās un kā strukturēt programmatūru. Lielisks pamats reāliem projektiem.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Automātu teorija</h3>
+                <p>Ļoti teorētisks, bet arī ļoti elegants kurss. Patika tas, kā viss balstās loģikā un precīzā domāšanā.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="semester-section" id="semester-4">
+        <div class="content-wrapper">
+          <div class="section">
+            <h2>4. semestris – Teorētiskais dziļums un praktiskais rāmis</h2>
+            <p>Šis semestris bija smags, bet vērtīgs, teorija kļuva abstraktāka, taču ļoti strukturēta. Sajutu, ka domāju daudz tehniskāk, un bija pirmā prakse, kas ļāva visu savienot ar realitāti.</p>
+            <div class="kursi-grid">
+              <div class="kurss-card">
+                <h3>Vides aizsardzība</h3>
+                <p>Obligāts, bet svarīgs kurss, lika padomāt par IT ietekmi uz vidi. Nebija tehnisks, bet izglītojošs.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Civilā aizsardzība</h3>
+                <p>Vēl viens no vispārizglītojošajiem kursiem, vairāk par atbildību un rīcību krīzēs. Noderīgi dzīvei kopumā.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Formālās gramatikas</h3>
+                <p>Ļoti teorētisks, bet strukturēts, beidzot sapratu, kā valodas var būt matemātiski definētas. Interesanti, ja iedziļinies.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Programmatūras testēšana</h3>
+                <p>Sapratu, cik svarīgi ir ne tikai kodēt, bet arī testēt. Kursā bija daudz praktisku piemēru un scenāriju domāšana.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Matemātiskā loģika</h3>
+                <p>Ļoti tīrs kurss, viss balstīts uz loģiku un pierādījumiem. Sākumā grūti, bet ar laiku sāka likties pat eleganti.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Prakse I</h3>
+                <p>Pirmā praktiskā pieredze, īsts uzrāviens. Sākumā bikli, bet sapratu, cik daudz esmu iemācījies.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Datu struktūras un algoritmi</h3>
+                <p>Viens no vissvarīgākajiem kursiem. Beidzot skaidri sapratu, kā efektīvi apstrādāt datus un kā algoritmi domā.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Datu bāzes II</h3>
+                <p>Padziļināts skatījums uz datu bāzēm. Šoreiz ar fokusēšanos uz projektēšanu, optimizāciju un reāliem risinājumiem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <section class="semester-section" id="semester-5">
+        <div class="content-wrapper">
+          <div class="section">
+            <h2>5. semestris – Darbs reālajā pasaulē</h2>
+            <p>Šis semestris bija ļoti praktisks. Lielākā daļa laika tika veltīta reāliem uzdevumiem un kvalifikācijas darba rakstīšanai. Sajutu, ka šis ir īstais brīdis pārbaudīt un pielietot visu, ko biju apguvis līdz šim.</p>
+            <div class="kursi-grid">
+              <div class="kurss-card">
+                <h3>Prakse II</h3>
+                <p>Jau ar lielāku pārliecību devos praksē. Sajūta, ka vairs neesmu iesācējs, varēju strādāt patstāvīgi, risināt problēmas un pierādīt sevi reālā vidē.</p>
+              </div>
+              <div class="kurss-card">
+                <h3>Kvalifikācijas darbs programmēšanā un datortīklu administrēšanā</h3>
+                <p>Pašdisciplīna un neatkarība bija vissvarīgākās. Rakstot kvalifikācijas darbu, sajutu gan spiedienu, gan gandarījumu, tas bija kā kopsavilkums visām manām prasmēm.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+    </main>
+  <footer class="footer-layout">
+    <a href="https://eztf.lu.lv/" target="_blank" class="footer-logo-desktop">
+      <img src="images/EZTF_lat_horiz.png" alt="EZTF logo" class="footer-logo" />
+    </a>
+    <p class="footer-text">
+      Autors: Dāvis Links | Darba nosaukums: Mācoties Latvijas Universitātē
+    </p>
+    <div class="footer-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="images/facebook-icon.png" alt="Facebook" class="footer-icon" />
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/Instagram-icon.png" alt="Instagram" class="footer-icon" />
+      </a>
+    </div>
+    <div class="footer-mobile-top">
+      <div class="footer-mobile-bottom">
+        <a href="https://eztf.lu.lv/" target="_blank" class="footer-logo-mobile">
+          <img src="images/EZTF_lat_horiz.png" alt="EZTF logo" class="footer-logo" />
+        </a>
+        <div class="footer-icons-mobile">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook-icon.png" alt="Facebook" class="footer-icon" />
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/Instagram-icon.png" alt="Instagram" class="footer-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.semester-dot');
+    const sections = document.querySelectorAll('.semester-section');
+    const label = document.getElementById('semester-label');
+    const leftArrow = document.getElementById('arrow-left');
+    const rightArrow = document.getElementById('arrow-right');
+    const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+  
+    let currentSemester = 0;
+    updateArrowState(currentSemester);
+  
+    function updateArrowState(index) {
+      leftArrow.disabled = index === 0;
+      rightArrow.disabled = index === buttons.length - 1;
+    }
+  
+    // Semestra pārslēgšana
+    buttons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        label.textContent = `${index + 1}. semestris`;
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(`semester-${index + 1}`).classList.add('active');
+        currentSemester = index;
+        updateArrowState(currentSemester);
+      });
+    });
+  
+    leftArrow.addEventListener('click', () => {
+      if (currentSemester > 0) {
+        buttons[currentSemester - 1].click();
+      }
+    });
+  
+    rightArrow.addEventListener('click', () => {
+      if (currentSemester < buttons.length - 1) {
+        buttons[currentSemester + 1].click();
+      }
+    });
+  
+    // ======= Tēmas funkcionalitāte =======
+  
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const isDark = savedTheme === 'dark';
+      document.body.classList.toggle('dark-mode', isDark);
+      updateThemeIcon(isDark);
+    }
+  
+    function updateThemeIcon(isDark) {
+      if (themeToggleDesktop) {
+        themeToggleDesktop.textContent = isDark ? '🌙' : '☀️';
+      }
+    }
+  
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      applySavedTheme();
+      if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+      }
+    });
+  </script>
+  
+</body>
+</html>
